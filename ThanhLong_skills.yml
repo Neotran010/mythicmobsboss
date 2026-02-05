@@ -1,0 +1,152 @@
+ThanhLongDame:
+  Skills:
+  - sendactionmessage{msg="&3&l⟪ Thanh Long ⟫ &b<mob.hp>&3/&b<mob.mhp>"} @PIR{r=40}
+  - sound{s=entity.player.swim;v=2;p=0.8} @self
+  - effect:particles{p=dripWater;a=15;hs=0.5;vs=0.5;s=0.3} @self
+
+ThanhLongSpawner:
+  Skills:
+  - sound{s=entity.enderdragon.growl;v=5;p=1.5} @PIR{r=60}
+  - effect:particlesphere{p=dripWater;a=200;r=5} @self
+  - effect:particlesphere{p=splash;a=150;r=3} @self
+  - effect:firework{t=1;d=1;tr=true;c=BLUE,AQUA} @self
+  - potion{type=INCREASE_DAMAGE;duration=600;level=1} @self
+
+ThanhLongDeath:
+  Skills:
+  - sound{s=entity.enderdragon.death;v=5;p=1.2} @PIR{r=60}
+  - effect:particlesphere{p=dripWater;a=500;r=8} @self
+  - effect:firework{t=4;d=2;tr=true;c=BLUE,AQUA,WHITE} @self
+  - delay 10
+  - effect:lightning @self
+
+LongKich:
+  Cooldown: 3.5
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=600;level=1} @self
+  - sound{s=entity.player.splash;v=3;p=0.5} @self
+  - effect:particleline{p=dripWater;a=3;db=0.5;hs=1;vs=0.3} @forward{f=10}
+  - effect:particleline{p=splash;a=2;db=0.5;hs=1;vs=0.3} @forward{f=10}
+  - delay 2
+  - effect:particleline{p=dripWater;a=3;db=0.5;hs=1;vs=0.3} @forward{f=10}
+  - damage{a=50000;ia=false} @EntitiesInLine{r=10;hs=2}
+  - potion{type=SLOW;duration=25;level=1} @EntitiesInLine{r=10;hs=2}
+  - effect:sound{s=entity.generic.splash;v=2} @EntitiesInLine{r=10;hs=2}
+
+LongQuyen:
+  Cooldown: 14
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=600;level=1} @self
+  - sound{s=entity.player.splash.high_speed;v=4;p=0.7} @self
+  - sendtitle{fadein=5;fadeout=10;duration=30;subtitle="&3&l⟪ LONG QUYỂN ⟫"} @PIR{r=30}
+  - effect:particlesphere{p=splash;a=100;r=2} @self
+  - delay 5
+  - effect:particleline{p=dripWater;a=5;db=0.5;hs=1.5;vs=0.5} @forward{f=14}
+  - effect:particles{p=splash;a=80;hs=7;vs=3;s=0.5} @forward{f=7}
+  - delay 10
+  - damage{a=30000;ia=false} @EntitiesInCone{a=90;r=14;hs=3}
+  - pull{v=0.5;to=true} @EntitiesInCone{a=90;r=14;hs=3}
+  - sound{s=entity.player.swim;v=3} @EntitiesInCone{a=90;r=14;hs=3}
+  - delay 10
+  - damage{a=30000;ia=false} @EntitiesInCone{a=90;r=14;hs=3}
+  - pull{v=0.5;to=true} @EntitiesInCone{a=90;r=14;hs=3}
+  - delay 10
+  - damage{a=30000;ia=false} @EntitiesInCone{a=90;r=14;hs=3}
+  - pull{v=0.5;to=true} @EntitiesInCone{a=90;r=14;hs=3}
+  - delay 10
+  - damage{a=30000;ia=false} @EntitiesInCone{a=90;r=14;hs=3}
+  - pull{v=0.5;to=true} @EntitiesInCone{a=90;r=14;hs=3}
+
+MuaRong:
+  Cooldown: 22
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=600;level=1} @self
+  - sound{s=entity.enderdragon.flap;v=4;p=1.2} @self
+  - sendtitle{fadein=10;fadeout=20;duration=60;title="&3&l⟪ MƯA RỒNG ⟫";subtitle="&b&oDòng nước thanh tẩy mọi tội lỗi"} @PIR{r=30}
+  - effect:particlesphere{p=dripWater;a=300;r=12} @self
+  - effect:particles{p=splash;a=200;hs=6;vs=10;s=1} @self
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=1} @PIR{r=12}
+  - effect:particles{p=dripWater;a=50;hs=6;vs=2;s=0.5} @PIR{r=12}
+  - sound{s=weather.rain.above;v=3} @PIR{r=12}
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=1} @PIR{r=12}
+  - effect:particles{p=dripWater;a=50;hs=6;vs=2;s=0.5} @PIR{r=12}
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=2} @PIR{r=12}
+  - effect:particles{p=dripWater;a=50;hs=6;vs=2;s=0.5} @PIR{r=12}
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=2} @PIR{r=12}
+  - effect:particles{p=dripWater;a=50;hs=6;vs=2;s=0.5} @PIR{r=12}
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=3} @PIR{r=12}
+  - effect:particles{p=dripWater;a=50;hs=6;vs=2;s=0.5} @PIR{r=12}
+  - delay 20
+  - damage{a=17500;ia=false} @PIR{r=12}
+  - potion{type=SLOW;duration=40;level=3} @PIR{r=12}
+  - effect:particles{p=splash;a=100;hs=6;vs=5;s=1} @PIR{r=12}
+
+ThinhNoThanhLong:
+  Cooldown: 30
+  Skills:
+  - potion{type=INCREASE_DAMAGE;duration=600;level=1} @self
+  - sound{s=entity.enderdragon.growl;v=5;p=0.8} @PIR{r=60}
+  - sendtitle{fadein=10;fadeout=20;duration=70;title="&3&l⟪ THỊNH NỘ THANH LONG ⟫";subtitle="&c&lBÃO NƯỚC HỦY DIỆT"} @PIR{r=40}
+  - effect:particlesphere{p=splash;a=500;r=16} @self
+  - potion{type=SLOW;duration=70;level=10} @self
+  - delay 10
+  - effect:particlering{p=dripWater;a=10;r=16;points=32} @self
+  - effect:particlering{p=splash;a=8;r=14;points=28} @self
+  - sound{s=entity.player.splash.high_speed;v=4} @PIR{r=16}
+  - delay 10
+  - effect:particlering{p=dripWater;a=10;r=14;points=28} @self
+  - effect:particlering{p=splash;a=8;r=12;points=24} @self
+  - delay 10
+  - effect:particlering{p=dripWater;a=10;r=12;points=24} @self
+  - effect:particlering{p=splash;a=8;r=10;points=20} @self
+  - delay 10
+  - sound{s=entity.generic.explode;v=3;p=0.5} @PIR{r=16}
+  - damage{a=60000;ia=false} @PIR{r=16}
+  - throw{velocity=15;velocityY=5} @PIR{r=16}
+  - effect:particlesphere{p=splash;a=300;r=16} @self
+  - effect:particles{p=dripWater;a=200;hs=8;vs=10;s=2} @self
+  - delay 12
+  - damage{a=60000;ia=false} @PIR{r=16}
+  - throw{velocity=15;velocityY=5} @PIR{r=16}
+  - effect:particlesphere{p=splash;a=300;r=16} @self
+  - sound{s=entity.generic.explode;v=3;p=0.6} @PIR{r=16}
+  - delay 12
+  - damage{a=60000;ia=false} @PIR{r=16}
+  - throw{velocity=15;velocityY=5} @PIR{r=16}
+  - effect:particlesphere{p=dripWater;a=400;r=16} @self
+  - sound{s=entity.generic.explode;v=3;p=0.7} @PIR{r=16}
+  - delay 20
+  - sendtitle{fadein=5;fadeout=15;duration=40;subtitle="&3&l⟪ VŨ XOÁY ⟫"} @PIR{r=16}
+  - effect:particlesphere{p=splash;a=200;r=8} @self
+  - sound{s=entity.player.swim;v=4} @PIR{r=16}
+  - delay 10
+  - pull{v=2;to=true} @PIR{r=8}
+  - damage{a=30000;ia=false} @PIR{r=8}
+  - potion{type=SLOW_DIGGING;duration=80;level=2} @PIR{r=8}
+  - effect:particlering{p=dripWater;a=15;r=8;points=16;y=0.5} @self
+  - delay 10
+  - pull{v=2;to=true} @PIR{r=8}
+  - damage{a=30000;ia=false} @PIR{r=8}
+  - effect:particlering{p=splash;a=12;r=6;points=12;y=1} @self
+  - delay 10
+  - pull{v=2;to=true} @PIR{r=8}
+  - damage{a=30000;ia=false} @PIR{r=8}
+  - effect:particlering{p=dripWater;a=15;r=4;points=8;y=1.5} @self
+  - delay 10
+  - pull{v=3;to=true} @PIR{r=8}
+  - damage{a=30000;ia=false} @PIR{r=8}
+  - effect:particlesphere{p=splash;a=150;r=8} @self
+  - delay 10
+  - pull{v=3;to=true} @PIR{r=8}
+  - damage{a=30000;ia=false} @PIR{r=8}
+  - effect:particles{p=dripWater;a=100;hs=4;vs=5;s=1} @self
