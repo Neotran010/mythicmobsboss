@@ -1,0 +1,43 @@
+ThanhLong:
+  Mobtype: husk
+  Display: '&b&l[&f&lLv 1000&b&l] &3&lThanh Long &b&l龍'
+  Health: 10000000
+  Armor: 5000
+  Damage: 50000
+  Disguise:
+    Type: player
+    Player: '&3&lThanh Long &b&l龍'
+    Skin: AquaDragon
+  Modules:
+    ThreatTable: true
+  Options:
+    FollowRange: 60
+    MovementSpeed: 0.4
+    AlwaysShowName: true
+    MaxCombatDistance: 60
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Skills:
+  - message{m="&r&3&l⟪ Thanh Long ⟫ &b&oNgươi dám xâm phạm lãnh địa của Ta?&r"} @PlayersOnServer ~onSpawn
+  - sendtitle{fadein=20;fadeout=20;duration=100;title="&b&l⟪ &3&lTHANH LONG &b&l⟫";subtitle="&f&l龍 &b&oChủ Nhân Của Dòng Lưu &f&l龍"} @PlayersOnServer ~onSpawn
+  - message{m="&r&3&l⟪ Thanh Long ⟫ &b&oDòng nước không bao giờ tha thứ...&r"} @PlayersOnServer ~onDeath
+  - effect:particles{p=dripWater;a=30;hs=0.5;vs=0.5;s=0.2;y=1} @Self ~onTimer:15
+  - effect:particles{p=splash;a=20;hs=0.3;vs=0.3;s=0.1;y=1} @Self ~onTimer:20
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  - skill{s=ThanhLongDame} ~onDamaged >0 1+
+  - skill{s=ThanhLongSpawner} @PlayersOnServer ~onSpawn
+  - skill{s=ThanhLongDeath} @PlayersOnServer ~onDeath
+  - skill{s=LongKich} @Target ~onTimer:70
+  - skill{s=LongQuyen} @Target ~onTimer:280
+  - skill{s=MuaRong} @PIR{r=30} ~onTimer:440
+  - skill{s=ThinhNoThanhLong} @PIR{r=30} ~onTimer:600
+  - message{m="&3&l⟪ Thanh Long ⟫ &b&oLong Kích!&r"} @PIR{r=40} ~onTimer:70
+  - message{m="&3&l⟪ Thanh Long ⟫ &b&oCảm nhận sức mạnh của Long Quyển!&r"} @PIR{r=40} ~onTimer:280
+  - message{m="&3&l⟪ Thanh Long ⟫ &b&oMưa Rồng giáng xuống!&r"} @PIR{r=40} ~onTimer:440
+  - message{m="&3&l⟪ Thanh Long ⟫ &c&lTHỊNH NỘ THANH LONG!&r"} @PIR{r=40} ~onTimer:600
+  KillMessages:
+  - '&3⟪ Thanh Long ⟫ &fđã nhấn chìm &c<target.name> &ftrong dòng lưu'
+  - '&c<target.name> &fđã bị xoáy nước cuốn đi'
+  - '&c<target.name> &fđã chết đuối trong bão thanh long'
