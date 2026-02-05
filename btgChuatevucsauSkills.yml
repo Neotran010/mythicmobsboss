@@ -1,0 +1,380 @@
+btgml1dame:
+  Skills:
+  - sendactionmessage{msg=“<mob.name><&sp><&co><&sp> &a<mob.hp>&6/&c<mob.mhp>”} @PIR{r=40}
+  - sound{s=entity.slime.hurt;v=3} @self
+  - effect:particles{particle=slime;a=10;hs=0.5;vs=0.5;s=0.2} @self
+btgml1spawner:
+  Skills:
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp>&c&lBOSS<&sp>&b&lTHẾ<&sp>&b&lGIỚI<&sp>&f&l<<”;subtitle=“&f[<&sp><mob.name><&sp>&f]”}
+  - message{m="&r&c<mob.name> &eđã xuất hiện<&nl> -----&eTọa độ &cX.&6<mob.l.x> &cY.&6<target.l.y> &cZ.&6<target.l.z> <&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"}
+btgml1death:
+  Skills:
+  - effect:firework{t=4;d=0.3;tr=true} @self
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“<mob.name>&e<&sp>đã<&sp>bị<&sp>hạ<&sp>gục<&sp>”;subtitle=“&eAnh<&sp>hùng<&sp>khiêu<&sp>chiến<&sp><&co><&sp>&b&l<trigger.name>”} @PlayersOnServer
+btgml1skill1:
+  Skills:
+  - effect:sound{s=entity.endermen.teleport;v=2;p=0.01}
+  - potion{type=SLOW;duration=250;level=10} @self
+  - potion{type=GLOWING;duration=230;level=2} @self
+  - throw{velocity=90;velocityY=2} @PlayersInRadius{r=20}
+  - sound{s=entity.witch.drink;v=5} @self
+  - sendtitle{fadein=20;fadeout=20;duration=40;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&aHấp<&sp>Thụ<&sp>Sinh<&sp>Lực<&sp>&f]”} @PIR{r=60}
+  - effect:particlering{p=mobappearance;a=10} @PIR{r=60}
+  - damagepercent{p=0.2;ia=true} @PIR{r=40}
+  - sound{s=entity.witch.drink;v=5} @self
+  - healpercent{m=0.1} @self
+  - effect:particlering{p=heart;a=10;r=10} @self
+  - effect:particles{particle=heart;amount=500;hS=30;vS=40;speed=5} @self
+btgml1skill4:
+  Cooldown: 57
+  Skills:
+  - sendtitle{fadein=20;fadeout=20;duration=80;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&aVùng<&sp>Đất<&sp>Câm<&sp>Lặng<&sp>&f]”} @PIR{r=60}
+  - delay 5
+  - sound{s=item.chorus_fruit.teleport;v=5} @self
+  - potion{type=SLOW;duration=300;level=10} @self
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - delay 20
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - throw{velocity=90;velocityY=3} @PlayersInRadius{r=10}
+  - damagepercent{p=0.2;ia=true} @PIR{r=10}
+  - delay 1
+  - effect:particlering{p=sweepAttack;a=1;r=10;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=8;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=6;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=4;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=2;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=4;y=0.3;points=16} @Self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlering{p=sweepAttack;a=1;r=6;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=8;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=10;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=8;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=6;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=4;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=sweepAttack;a=1;r=2;y=0.3;points=16} @Self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=1.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlering{p=angryVillager;a=1;r=1;y=1.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=1.1;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.9;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.7;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.5;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.3;points=8} @Self
+  - delay 2
+  - effect:particlering{p=angryVillager;a=1;r=1;y=0.1;points=8} @Self
+  - delay 3
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - sendtitle{fadein=20;fadeout=20;duration=80;title=“&f&l>><&sp>&c&lNGUY<&sp>HIỂM<&sp>&f&l<<”;subtitle=“&f[<&sp>&aHãy<&sp>Chạy<&sp>Thật<&sp>Xa<&sp>&f]”} @PIR{r=60}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=1} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=2} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=3} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=200;r=4} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=200;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=200;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=300;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=300;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=300;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=400;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=400;r=5} @self
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=400;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=400;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - potion{type=SLOW;duration=100;level=10} @self
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particlesphere{p=reddust;c=#000000;a=5000;r=40} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=1000;ignoreArmor=true} @PIR{r=40}
+  - potion{type=SLOW;duration=100;level=3} @self
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10}
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=500;ignoreArmor=true} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - effect:particlesphere{p=reddust;c=#404040;a=500;r=5} @self
+  - delay 2
+  - sound{s=ambient.cave;v=5} @PIR{r=40}
+  - effect:particlesphere{p=reddust;c=#000000;a=5000;r=40} @self
+  - effect:particlesphere{p=reddust;c=#404040;a=100;r=5} @self
+  - effect:particles{particle=flame;a=50;hs=0.1;vs=0.1;s=0.2} @self
+  - effect:particles{p=reddust;c=#404040;a=200;hs=10;vs=35;s=0.2} @self
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - damage{a=1000;ignoreArmor=true} @PIR{r=40}
+  - damage{a=20000} @PIR{r=40}
+  - potion{type=WITHER;duration=20;level=10} 
+  - potion{type=BLINDNESS;duration=10;level=1} 
+btgml1skill5:
+  Cooldown: 23
+  Skills:
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=16} @Self
+  - delay 2
+  - effect:particlering{p=flame;a=1;r=5;y=0.3;points=16} @Self
+  - delay 2
+  - effect:particlering{p=flame;a=1;r=5;y=0.5;points=16} @Self
+  - delay 2
+  - effect:particlering{p=flame;a=1;r=5;y=0.7;points=16} @Self
+  - delay 2
+  - effect:particlering{p=flame;a=1;r=5;y=0.9;points=16} @Self
+  - delay 2
+  - effect:particlering{p=flame;a=1;r=5;y=0.11;points=16} @Self
+  - delay 1
+  - pull{v=6;to=true} @PIR{r=15}
+  - delay 3
+  - sound{s=block.slime.break;v=2} @self
+  - effect:particlesphere{p=bubble;a=50;r=1} @self
+  - delay 1
+  - effect:particlesphere{p=bubble;a=50;r=1} @self
+  - delay 1
+  - effect:particlesphere{p=bubble;a=50;r=1} @self
+  - delay 1
+  - effect:particlesphere{p=bubble;a=50;r=1} @self
+  - delay 1
+  - effect:particlesphere{p=bubble;a=50;r=1} @self
+  - damage{a=500;ignoreArmor=true} @PIR{r=6}
+  - sound{s=item.armor.equip_elytra;v=2} @self
+  - throw{velocity=10;velocityY=5} @PIR{r=6}
+  
+  
+  

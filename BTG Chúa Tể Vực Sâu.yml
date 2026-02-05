@@ -1,0 +1,30 @@
+btgml1:
+  Mobtype: husk
+  Display: '&c&lChúa Tể &8&lVực Sâu'
+  Health: 10000000
+  Armor: 5000
+  Damage: 50000
+  Disguise:
+    Type: player
+    Player: '&c&lChúa Tể &8&lVực Sâu'
+    Skin: vesperi__
+  Options:
+    FollowRange: 60
+    MovementSpeed: 0.35
+    AlwaysShowName: true
+    MaxCombatDistance: 60
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  - effect:particlesphere{p=reddust;c=#404040;a=10;r=2} @self ~onTimer:10
+  - skill{s=btgml1dame} ~onDamaged >0 1+
+  - skill{s=btgml1spawner} @PlayersOnServer ~onSpawn
+  - skill{s=btgml1death} @PlayersOnServer ~onDeath
+  - skill{s=btgml1skill1} @PIR{r=40} ~onKillPlayer
+  - skill{s=btgml1skill2} @Target ~onCombat 
+  - skill{s=btgml1skill3} @Target ~onAttack 
+  - skill{s=btgml1skill4} @PIR{r=40} ~onCombat 
+  - skill{s=btgml1skill5} @Target ~onCombat

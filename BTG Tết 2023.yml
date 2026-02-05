@@ -1,0 +1,112 @@
+MeoThanTai:
+  Mobtype: husk
+  Display: '&f&l[&d&lLv 1000&f&l] &e&lMèo Thần Tài'
+  Health: 10000000
+  Armor: 10
+  Damage: 2000
+  Disguise:
+    Type: player
+    Player: '&e&lMèo Thần Tài'
+    Skin: kitkat690
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+    MaxCombatDistance: 50
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  - sound{s=entity.cat.purr} @self ~onTimer:60
+  - sendactionmessage{msg=“<mob.name><&sp><&co><&sp> &a<mob.hp>&6/&c<mob.mhp>”} @PIR{r=40} ~onTimer:15
+  - effect:particles{p=happyVillager;amount=200;vS=15;hS=15;yOffset=1} @self ~onTimer:15
+  - message{m="&r&c<mob.name> &bđang xuất hiện<&nl> -----&bTại &d/warp bossthegioi <&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"} @PlayersOnServer ~onTimer:1200
+  - skill{s=MeoThanTaiattack} ~onAttack <100% 1
+  - skill{s=MeoThanTaidame} ~onDamaged >0 1+
+  - skill{s=MeoThanTaispawner} @PlayersOnServer ~onSpawn
+  - effect:firework{t=2;d=1;tr=true} @Ring{radius=10;points=10} ~onSpawn
+  - skill{s=MeoThanTaideath} @PlayersOnServer ~onDeath
+  - skill{s=MeoThanTai_MPH} @Target ~onTimer:230
+  - skill{s=MeoThanTai_MNN} @Target ~onTimer:270
+  - skill{s=MeoThanTai_MLL} @Target ~onTimer:555
+  - skill{s=MeoThanTaiskill1} ~onCombat ~onTimer:360
+  - skill{s=MeoThanTaiskill2} @Target ~onTimer:150
+  - skill{s=MeoThanTaiskill3} @Target ~onTimer:821
+  KillMessages:
+  - '&c<target.name> &fđã bị <mob.name> &flấy hết nhân phẩm trong năm :))'
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'
+  
+MeoPhaoHoa:
+  Mobtype: husk
+  Display: '&f&l[&a&lLv 500&f&l] &f&lMèo &d&lPháo Hoa'
+  Health: 5000000
+  Armor: 1
+  Damage: 1
+  Disguise:
+    Type: ocelot
+    Player: '&6&lMèo &d&lPháo Hoa'
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.5
+    AlwaysShowName: true
+    MaxCombatDistance: 50
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  - skill{s=MPH_spawn} ~onSpawn
+  KillMessages:
+  - '&c<target.name> &fđã bị <mob.name> &fnổ cho tan thành mây khói'
+  
+MeoNhunNhay:
+  Mobtype: slime
+  Display: '&f&l[&a&lLv 100&f&l] &f&lMèo &b&lNhún Nhảy'
+  Health: 5000000
+  Armor: 1
+  Damage: 1
+  Disguise:
+    Type: ocelot
+    Player: '&f&lMèo &b&lNhún Nhảy'
+  Options:
+    FollowRange: 50
+    MovementSpeed: 1
+    AlwaysShowName: true
+    MaxCombatDistance: 50
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  - skill{s=MNN_spawn} @PIR{r=4} ~onSpawn
+  KillMessages:
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'
+  
+MeoLoLung:
+  Mobtype: vex
+  Display: '&f&l[&a&lLv 250&f&l] &f&lMèo &7&lLơ Lửng'
+  Health: 5000000
+  Armor: 1
+  Damage: 1
+  Disguise:
+    Type: ocelot
+    Player: '&f&lMèo &7&lLơ Lửng'
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+    MaxCombatDistance: 50
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Skills:
+  - skill{s=MLL_attack} @PIR{r=5} ~onAttack
+  - skill{s=MLL_spawn} ~onSpawn
+  KillMessages:
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'

@@ -1,0 +1,217 @@
+SN5Heath:
+  Skills:
+  - sendactionmessage{msg=“<mob.name><&sp><&co><&sp> &a<mob.hp>&6/&c<mob.mhp>”} @PIR{r=20}
+  - sound{s=block.anvil.land} @self
+  - effect:itemspray{item=cake;amount=1;velocity=1;d=15;} @self
+SN5Spawner:
+  Skills:
+  - command{c=time set 0}
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&a&lChúc<&sp>Mừng<&sp>Sinh<&sp>Nhật<&sp>5<&sp>Tuổi<&sp>&f]”}
+  - delay 5
+  - throw{velocity=50;velocityY=10} @PlayersInRadius{r=6}
+  - effect:particles{p=largeexplosion;a=5;vS=0.75;hS=0.75} @Ring{radius=4;points=12}
+  - sound{s=entity.elder_guardian.curse;v=5} @self
+SN5Death:
+  Skills:
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><mob.name>&6<&sp>đã<&sp>hết<&sp>quà<&sp>&f&l<<”;subtitle=“&aNgười<&sp>nhận<&sp>được<&sp>nhiều<&sp>quà<&sp>nhất<&sp><&co><&sp>&d&l<trigger.name>”}
+  - effect:explosion @self
+  - effect:particleline{particle=instantSpell;amount=1;s=0;hs=2;sv=0;syo=5} @Ring{radius=3;points=6}
+  - throw{velocity=50;velocityY=50} @PlayersInRadius{r=6}
+  - effect:itemspray{item=cake;amount=30;velocity=5;d=40;} @self
+SN5Skill1:
+  Cooldown: 15
+  Skills:
+  - summon{type=SaoBang;amount=1} @Ring{radius=10;points=5}
+  - delay 10
+  - summon{type=SaoBang;amount=1} @Ring{radius=20;points=10}
+SaoBangSpawn:
+  Skills:
+  - potion{type=INVISIBILITY;d=2000;l=1} @self
+  - delay 10
+  - projectile{onTick=SaoBang-Tick;onHit=SaoBang-Hit;onEnd=SaoBang-End;v=30;i=1;hR=5;vR=5;syo=75;sfo=20;mr=1000;d=500;sE=false} @Self
+SaoBang-Tick:
+  Skills:
+  - effect:particles{p=instantSpell;a=50;vS=1.5;hS=1.5} @Origin
+  - effect:particles{p=largesmoke;a=15;vS=1;hS=1} @Origin
+  - effect:particles{p=largeexplosion;a=3;vS=0.75;hS=0.75} @Origin
+  - sound{s=entity.wither.shoot} @Origin
+SaoBang-Hit:
+  Skills:
+  - damagepercent{p=0.8;ia=true}
+  - explosion{blockdamage=false;fire=false;yield=5} @Origin
+SaoBang-End:
+  Skills:
+  - explosion{blockdamage=false;fire=false;yield=5} @Origin
+  - remove{m=SaoBang} @Self
+
+SN5Skill2:
+  Cooldown: 20
+  Skills:
+  - sound{s=item.chorus_fruit.teleport;v=5} @self
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp>&a&lAE&f&lMINE<&sp>&f&l<<”;subtitle=“<&sp>&d&lChúc<&sp>Mừng<&sp>Sinh<&sp>Nhật<&sp>5<&sp>Tuổi<&sp>”} @PIR{r=100}
+  - potion{type=SLOW;duration=90;level=10} @self
+  - potion{type=LEVITATION;duration=90;level=1} @self
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - delay 5
+  - teleport @target
+  - sound{s=item.chorus_fruit.teleport;v=5} @self
+  - command{c=time set 18000}
+  - sound{s=entity.enderdragon.shoot;v=5;p=3} @self
+  - effect:particles{p=flame;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self
+  - effect:particlering{particle=flame;a=500;r=20;vs=5;points=8} @self
+  - effect:particlering{particle=instantSpell;a=1000;r=10;vs=5;hs=5;points=8} @self
+  - effect:particleline{particle=instantSpell;amount=1;s=0;hs=0;sv=0;syo=40} @self
+  - sound{s=entity.enderdragon.ambient;v=5;p=3} @self
+  - damage{a=50000} @PIR{r=20}
+SN5Skill3:
+  Skills:
+  - effect:particles{particle=flame;amount=500;vS=10;hS=10;yOffset=1} @self
+  - ignite{ticks=100} @PIR{r=10}
+  - effect:particlering{particle=flame;a=500;r=10;vs=5;points=8} @self
+  - sound{s=entity.wither.shoot;v=2} @self
+  - pull{v=6;to=true} @PIR{r=10}
+  - damage{a=100;ia=true} @PIR{r=10}
+  - effect:particlering{particle=flame;a=500;r=10;vs=5;points=8} @self
+  - delay 10
+  - effect:particles{particle=flame;amount=500;vS=10;hS=10;yOffset=1} @self
+  - sound{s=entity.wither.shoot;v=2} @self
+  - pull{v=6;to=true} @PIR{r=10}
+  - damage{a=250;ia=true} @PIR{r=10}
+  - effect:particlering{particle=flame;a=500;r=10;vs=5;points=8} @self
+  - delay 10
+  - effect:particles{particle=flame;amount=500;vS=10;hS=10;yOffset=1} @self
+  - sound{s=entity.wither.shoot;v=2} @self
+  - pull{v=6;to=true} @PIR{r=10}
+  - damage{a=500;ia=true} @PIR{r=10}
+  - effect:particlering{particle=flame;a=500;r=10;vs=5;points=8} @self
+  - delay 10
+  - effect:particles{particle=flame;amount=500;vS=10;hS=10;yOffset=1} @self
+  - sound{s=entity.wither.shoot;v=2} @self
+  - pull{v=6;to=true} @PIR{r=10}
+  - damage{a=750} @PIR{r=10}
+  - effect:particlering{particle=flame;a=500;r=10;vs=5;points=8} @self
+  - delay 10
+  - effect:particles{particle=flame;amount=500;vS=10;hS=10;yOffset=1} @self
+  - damage{a=1000} @PIR{r=10}
+SN5skill4:
+  Cooldown: 15
+  Skills:
+  - sound{s=entity.ghast.shoot;v=3}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=60;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=90;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=120;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=150;sE=false}  
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=30;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=0;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-30;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-60;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-90;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-120;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-150;sE=false}
+  - projectile{onTick=SN5skill4-Tick;onHit=SN5skill4-Hit;onEnd=SN5skill4-End;v=4;i=1;mr=30;hO=-180;sE=false} 
+SN5skill4-Tick:
+  Skills:
+  - effect:particles{p=flame;amount=30;speed=0;hS=0;vS=0} @origin
+  - effect:particles{p=instantSpell;amount=7;speed=0;hS=0.5;vS=0.5} @origin
+  - effect:particles{p=sweepAttack;amount=5;speed=0;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=reddust;amount=10;speed=0;hS=1.2;vS=1.2} @origin
+SN5skill4-Hit:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.generic.explode;v=1;p=0}
+  - damage{a=10000} @PIR{r=5}
+SN5skill4-End:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.generic.explode;v=1;p=0}
+  - damage{a=10000} @PIR{r=5}
+SN5Skill5:
+  Skills:
+  - missile{ot=SN5Skill5_TICK;oh=SN5Skill5_HIT;oe=SN5Skill5_END;v=12;i=1;hR=1.5;vR=1.5;in=0.75;md=160}
+
+SN5Skill5_TICK:
+  Skills:
+  - effect:particles{p=reddust;a=10;hS=0;vS=0} @origin
+  - effect:particles{p=flame;amount=5;hS=0.2;vS=0.2} @origin
+  - effect:particles{p=dripLava;amount=3;hS=1.2;vS=1.2} @origin
+
+SN5Skill5_HIT:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.generic.explode;v=1;p=0}
+  - damagepercent{p=0.5;ia=true}
+SN5Skill5_END:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=entity.generic.explode;v=1;p=0}
+  - damage{a=1000}

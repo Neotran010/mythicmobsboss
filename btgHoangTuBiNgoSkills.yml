@@ -1,0 +1,104 @@
+HoangTuBiNgoHeath:
+  Skills:
+  - sendactionmessage{msg=“<mob.name><&sp><&co><&sp> &a<mob.hp>&6/&c<mob.mhp>”} @PIR{r=20}
+  - sound{s=block.sand.step} @self
+HoangTuBiNgoSpawner:
+  Skills:
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&a&lĐã<&sp>Được<&sp>Triệu<&sp>Hồi<&sp>&f]”}
+  - delay 5
+  - throw{velocity=50;velocityY=10} @PlayersInRadius{r=6}
+  - effect:particles{p=largeexplosion;a=5;vS=0.75;hS=0.75} @Ring{radius=4;points=12}
+  - sound{s=entity.vex.charge;v=5} @PIR{r=100}
+HoangTuBiNgo_2Spawn:
+  Skills:
+  - delay 200
+  - damage{a=2000} @PIR{r=5}
+  - sound{s=entity.zombie_villager.cure;v=1} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=0.6;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1.4;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1.8;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=2.2;points=32} @self
+  - remove{m=bossHoangTuBiNgo_2} @self  
+MHoangTuBiNgo_2Attack:
+  Skills:
+  - damage{a=20000} @PIR{r=3}
+  - sound{s=entity.zombie_villager.cure;v=1} @self
+  - healpercent{m=0.1} @Parent
+  - effect:particles{p=heart;a=5;vS=0.75;hS=0.75} @Parent
+  - sound{s=entity.witch.drink;v=5} @Parent
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=0.6;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1.4;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=1.8;points=32} @self
+  - delay 2
+  - effect:particlering{p=lava;a=1;r=3;y=2.2;points=32} @self
+  - remove{m=bossHoangTuBiNgo_2} @self  
+HoangTuBiNgoDeath:
+  Skills:
+  - sound{s=entity.enderdragon.death;v=3} @self
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><mob.name>&6<&sp>đã<&sp>bị<&sp>hạ<&sp>gục<&sp>&f&l<<”;subtitle=“&aAnh<&sp>hùng<&sp>hạ<&sp>gục<&sp><&co><&sp>&d&l<trigger.name>”}
+  - effect:explosion @self
+  - effect:particleline{particle=lava;amount=1;s=0;hs=2;sv=0;syo=5} @Ring{radius=3;points=5}
+  - throw{velocity=10;velocityY=10} @PlayersInRadius{r=6}
+  - heal{a=5000} @PIR{r=30}
+HoangTuBiNgoSkill1:
+  Skills:
+  - sound{s=entity.enderdragon.hurt;v=2} self
+  - damage{a=1000} @PIR{r=7}
+  - effect:particlering{particle=lava;radius=1;points=15;amount=200;hS=1;vS=1} @Self 
+  - delay 2
+  - effect:particleringparticle=lava;radius=2;points=15;amount=200;hS=1;vS=21 @Self 
+  - delay 2
+  - effect:particlering{particle=lava;radius=3;points=15;amount=200;hS=1;vS=1} @Self 
+  - delay 2
+  - effect:particlering{particle=lava;radius=4;points=15;amount=200;hS=1;vS=1} @Self 
+  - delay 2
+  - effect:particlering{particle=lava;radius=5;points=15;amount=200;hS=1;vS=1} @Self 
+  - delay 2
+  - effect:particlering{particle=lava;radius=6;points=15;amount=200;hS=1;vS=1} @Self 
+  - delay 2
+  - effect:particlering{particle=lava;radius=7;points=15;amount=200;hS=1;vS=1} @Self 
+HoangTuBiNgoSkill2:
+  Skills:
+  - sound{s=entity.zombie.break_door_wood} @PIR{r=40}
+  - summon{type=bossHoangTuBiNgo_2;amount=1} @Ring{radius=10;points=6}
+HoangTuBiNgoSkill3:
+  Skills:
+  - sound{s=entity.enderdragon.growl;v=2} @self
+  - potion{type=BLINDNESS;duration=200;level=5} @PIR{r=10}
+  - potion{type=SLOW;duration=200;level=3} @PIR{r=10}
+  - effect:blockmask{m=PUMPKIN;dv=15;r=10;d=200} @self
+  - damagepercent{p=0.2;ia=true} @PIR{r=10}
+  - delay 10
+  - effect:particleorbital{r=3;points=24;t=60;i=1;vy=20;particle=lava} @self
+  - effect:particleorbital{r=3;points=24;t=60;i=1;vx=20;particle=lava} @self
+  - effect:particleorbital{r=3;points=24;t=60;i=1;vz=20;particle=lava} @self
+  - delay 60
+  - potion{type=GLOWING;duration=60;level=1} @PIR{r=7}
+  - potion{type=SLOW;duration=60;level=3} @PIR{r=7}
+  - damagepercent{p=0.2;ia=true} @PIR{r=10}
+  - effect:particlesphere{p=lava;a=100;r=2} @self
+  - sound{s=block.lava.extinguish} @self
+  - damagepercent{p=0.2;ia=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{p=lava;a=100;r=3} @self
+  - sound{s=block.lava.extinguish} @self
+  - damagepercent{p=0.2;ia=true} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{p=lava;a=200;r=4} @self
+  - sound{s=block.lava.extinguish} @self
+  - damage{a=5000} @PIR{r=10}
+  - delay 2
+  - effect:particlesphere{p=lava;a=200;r=5} @self
+  - sound{s=block.lava.extinguish} @self
+  - damage{a=50000} @PIR{r=10}

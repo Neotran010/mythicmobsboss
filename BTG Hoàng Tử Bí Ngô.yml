@@ -1,0 +1,64 @@
+bossHoangTuBiNgo_1:
+  Mobtype: husk
+  Display: '&f&l[&c&lLv 1000&f&l] &e&lHoàng Tử &6&lBí Ngô'
+  Health: 5000000
+  Armor: 100
+  Damage: 1000
+  Disguise:
+      Type: player
+      Player: '&e&lHoàng Tử &6&lBí Ngô'
+      Skin: Reddified
+  Modules:
+    ThreatTable: true
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.5
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+  Skills:
+  - message{m="&r&c<mob.name> &bđang xuất hiện tại &d/warp bossthegioi<&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"} @PlayersOnServer ~onTimer:1200
+  - message{m="&r&c<mob.name> &fđã bị hạ gục! &dTất cả được hồi 5000 HP"} @PlayersOnServer ~onDeath
+  - effect:particles{p=reddust;a=20;hs=0.3;vs=0.3;s=0.2;y=1} @Self ~onTimer:20
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  - potion{type=INVISIBILITY;duration=40;level=2} @self ~onTimer:100
+  - sound{s=entity.enderdragon.ambient;v=2} @self ~onTimer:100
+  - skill{s=HoangTuBiNgoHeath} ~onTimer:20
+  - skill{s=HoangTuBiNgoSpawner} @PlayersOnServer ~onSpawn
+  - skill{s=HoangTuBiNgoDeath} @PlayersOnServer ~onDeath
+  - skill{s=HoangTuBiNgoSkill1} @target ~onTimer:150
+  - skill{s=HoangTuBiNgoSkill2} @target ~onTimer:300
+  - skill{s=HoangTuBiNgoSkill3} @target ~onTimer:500
+  KillMessages:
+  - '&c<target.name> &fđã bị đánh tới chết'
+  - '&c<target.name> &fđã biến thành vong'
+  - '&c<target.name> &fđã biến thành quả bí ngô'
+
+bossHoangTuBiNgo_2:
+  Mobtype: zombie
+  Display: '&6&lBí Ngô &c&lĐáng Sợ'
+  Health: 500000
+  Armor: 1
+  Damage: 1000
+  Options:
+    FollowRange: 50
+    MovementSpeed: 0.3
+    AlwaysShowName: true
+    MaxCombatDistance: 50
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Silent: true
+  Equipment:
+  - PUMPKIN:4
+  Skills:
+  - skill{s=HoangTuBiNgo_2Spawn} ~onSpawn
+  - skill{s=MHoangTuBiNgo_2Attack} ~onAttack
+  - effect:particles{p=reddust;a=20;hs=0.3;vs=0.3;s=0.2;y=1} @Self ~onTimer:20
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  KillMessages:
+  - '&c<target.name> &fđã biến thành quả bí ngô'

@@ -1,0 +1,201 @@
+SN6Tattack:
+  Skills:
+  - damagepercent{p=0.1;ia=true}
+  - sound{s=entity.cat.hiss}
+SN6Tdame:
+  Skills:
+  - sound{s=entity.generic.hurt;v=3} @self
+  - effect:particles{p=blockcrack_152_0;amount=1;hS=0.6;vS=0.6;speed=5} @self
+SN6Tspawner:
+  Skills:
+  - sound{s=entity.cat.ambient} @self
+  - effect:firework{t=2;d=1;tr=true} @Ring{radius=10;points=10}
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&a&lĐã<&sp>Được<&sp>Triệu<&sp>Hồi<&sp>&f]”}
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+SN6Tspawner2:
+  Skills:
+  - sound{s=entity.enderdragon.growl} @self
+  - effect:firework{t=3;d=1;tr=true} @Ring{radius=10;points=10}
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><&sp><mob.name><&sp>&f&l<<”;subtitle=“&f[<&sp>&a&lĐã<&sp>Được<&sp>Hồi<&sp>Phục<&sp>&f]”}
+SN6Tdeath:
+  Skills:
+  - effect:firework{t=4;d=0.3;tr=true} @self
+  - sound{s=entity.enderdragon.death;v=10} @self
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“<mob.name>”;subtitle=“&f[<&sp>&cĐang<&sp>Phục<&sp>Hồi<&sp>&f]”} @PlayersOnServer
+  - delay 15
+  - sound{s=entity.enderdragon.hurt;v=5} @self
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - delay 15
+  - sound{s=entity.enderdragon.hurt;v=5} @self
+  - effect:particlering{p=flame;a=1;r=1.2;y=0.2;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=0.7;y=0.2;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - delay 15
+  - sound{s=entity.enderdragon.hurt;v=5} @self
+  - effect:particlering{p=flame;a=1;r=1.2;y=0.4;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=0.7;y=0.4;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - delay 15
+  - sound{s=entity.enderdragon.hurt;v=5} @self
+  - effect:particlering{p=flame;a=1;r=1.2;y=0.6;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=0.7;y=0.6;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - delay 15
+  - sound{s=entity.enderdragon.hurt;v=5} @self
+  - effect:particlering{p=flame;a=1;r=1.2;y=0.8;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=0.7;y=0.8;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=5;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=4.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=4;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - delay 15
+  - effect:particlering{p=flame;a=1;r=3;y=0.1;points=32} @Self 
+  - effect:particlering{p=flame;a=1;r=1;y=0.1;points=16} @Self 
+  - effect:particlering{p=flame;a=1;r=2.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=2;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=1.5;y=0.1;points=8} @Self 
+  - effect:particlering{p=flame;a=1;r=0.5;y=1.28;points=10} @Self 
+  - sound{s=entity.enderdragon.growl;v=5} @self
+  - delay 1
+  - summon{t=SinhNhat6Tuoi_2} @self
+SN6Tdeath2:
+  Skills:
+  - effect:firework{t=4;d=0.3;tr=true} @self
+  - sendtitle{fadein=20;fadeout=20;duration=100;title=“&f&l>><mob.name>&6<&sp>đã<&sp>bị<&sp>hạ<&sp>gục<&sp>&f&l<<”;subtitle=“&aAnh<&sp>hùng<&sp>khiêu<&sp>chiến<&sp><&co><&sp>&d&l<trigger.name>”}
+SN6Tskill1:
+  Skills:
+  - sound{s=entity.generic.eat;v=3} @self
+  - throw{velocitiy=15;velocityY=5} @PIR{r=5}
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - sound{s=entity.generic.eat;v=3} @self
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - sound{s=entity.generic.eat;v=3} @self
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - delay 2
+  - effect:itemspray{item=cake;amount=1;velocity=0.5;d=15;} @self 
+  - summon{t=SinhNhat6Tuoi_3;a=1} @Ring{radius=10;points=5}
+SN6Tskill2:
+  Skills:
+  - throw{velocity=10;velocityY=10} @PIR{r=10}
+  - damage{a=5000} @PIR{r=11}
+  - effect:particles{p=hugeexplode;a=5;vs=0.5;hs=0.5;s=0;y=1} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=0.5} @Self
+  - effect:sound{s=entity.generic.explode;v=2;p=1;repeat=7;repeatInterval=2} @Self
+  - effect:particlesphere{p=largeexplode;a=100;r=3} @self
+  - effect:itemspray{item=cake;amount=5;velocity=0.5;d=20;} @self 
+  - delay 2
+  - effect:particlesphere{p=largeexplode;a=100;r=5} @self
+  - effect:itemspray{item=cake;amount=5;velocity=0.5;d=20;} @self 
+  - delay 2
+  - effect:particlesphere{p=largeexplode;a=100;r=7} @self
+  - effect:itemspray{item=cake;amount=5;velocity=0.5;d=20;} @self 
+  - delay 2
+  - effect:particlesphere{p=largeexplode;a=100;r=9} @self
+  - effect:itemspray{item=cake;amount=5;velocity=0.5;d=20;} @self 
+  - delay 2
+  - effect:particlesphere{p=largeexplode;a=100;r=11} @self
+  - effect:itemspray{item=cake;amount=5;velocity=0.5;d=20;} @self 
+SN6Tskill3:
+  Skills:
+  - sound{s=item.armor.equip_gold} @self
+  - summon{type=SinhNhat6Tuoi_4;amount=1} @Ring{radius=10;points=5}
+  - delay 20
+  - summon{type=SinhNhat6Tuoi_4;amount=1} @Ring{radius=20;points=5}
+SN6TSpawn:
+  Skills:
+  - potion{type=INVISIBILITY;d=2000;l=1} @self
+  - delay 10
+  - projectile{onTick=SN6T-Tick;onHit=SN6T-Hit;onEnd=SN6T-End;v=30;i=1;hR=5;vR=5;syo=75;sfo=20;mr=1000;d=500;sE=false} @Self
+SN6T-Tick:
+  Skills:
+  - effect:particles{p=heart;a=10;vS=1;hS=1} @Origin
+  - effect:particles{p=instantSpell;a=10;vS=1;hS=1} @Origin
+  - sound{s=entity.generic.extinguish_fire;v=3} @Origin
+SN6T-Hit:
+  Skills:
+  - damagepercent{p=0.8;ia=true}
+  - damage{a=50000}
+SN6T-End:
+  Skills:
+  - effect:particles{p=instantSpell;a=50;vS=1.5;hS=1.5} @Origin
+  - effect:particles{p=largeexplosion;a=3;vS=0.75;hS=0.75} @Origin
+  - effect:explosion @Origin
+  - effect:itemspray{item=cake;amount=20;velocity=2;d=40;} @Origin
+  - sound{s=entity.generic.explode} @Origin
+  - damage{a=20000} @PIR{r=5}
+  - remove{m=SinhNhat6Tuoi_4} @Self
+SN6T_3Spawn:
+  Skills:
+  - delay 200
+  - remove{m=SinhNhat6Tuoi_3} @Self

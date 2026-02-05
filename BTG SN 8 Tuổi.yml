@@ -1,0 +1,155 @@
+SinhNhat8Tuoi:
+  Mobtype: husk
+  Display: '&f&l[&c&lPhó Bản&f&l] &6&lBánh &d&lSinh Nhật'
+  Health: 3000000
+  Armor: 100
+  Damage: 50000
+  Disguise:
+      Type: player
+      Player: '&6&lBánh &d&lSinh Nhật'
+      Skin: Snekkiecrafts
+  Modules:
+    ThreatTable: true
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.8
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Despawn: false
+  Equipment:
+  - cake:4
+  - btgSN5Item:0
+  Skills:
+  - message{m="&r&c<mob.name> &bđang xuất hiện<&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"} @PlayersOnServer ~onTimer:1200
+  - message{m="&r&c<mob.name> &bđã ngỏm củ tỏi<&nl> Anh hùng hạ gục &d&l<trigger.name>&r"} @PlayersOnServer ~onDeath
+  - effect:particles{p=instantSpell;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self ~onTimer:20
+  - skill{s=SN5Heath} ~onDamaged >0 1+
+  - skill{s=SN6Tspawner} @PlayersOnServer ~onSpawn
+  - effect:firework{t=2;d=1;tr=true} @Ring{radius=10;points=10} ~onSpawn
+  - skill{s=SN5Death} @PlayersOnServer ~onDeath
+  - skill{s=SN5Skill1} @target ~onCombat <70%
+  - skill{s=SN5Skill2} @target ~onCombat <80%
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  - skill{s=SN5Skill3} @target ~onTimer:225
+  - skill{s=SN5skill4} @target ~onTimer:333 <90%
+  - skill{s=SN5Skill5} @target ~onTimer:145
+  - skill{s=SN6Tdame} ~onDamaged >0 1+
+  - skill{s=SN6Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN6Tskill2} @Target ~onTimer:150
+  - skill{s=SN6Tskill3} @Target ~onTimer:621
+  - skill{s=SN7Tattack} ~onAttack <100% 1
+  - skill{s=SN7Tdame} ~onDamaged >0 1+
+  - skill{s=SN7Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN7Tskill2} @Target ~onTimer:150
+  - skill{s=SN7Tskill3} @Target ~onTimer:621
+  KillMessages:
+  - '&c<target.name> &fđã bị ném bánh vào mặt'
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'
+
+SinhNhat8Tuoihard:
+  Mobtype: husk
+  Display: '&f&l[&c&lPhó Bản&f&l] &6&lBánh &d&lSinh Nhật'
+  Health: 6000000
+  Armor: 130
+  Damage: 60000
+  Disguise:
+      Type: player
+      Player: '&6&lBánh &d&lSinh Nhật'
+      Skin: Snekkiecrafts
+  Modules:
+    ThreatTable: true
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.8
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Despawn: false
+  Equipment:
+  - cake:4
+  - btgSN5Item:0
+  Skills:
+  - message{m="&r&c<mob.name> &bđang xuất hiện<&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"} @PlayersOnServer ~onTimer:1200
+  - message{m="&r&c<mob.name> &bđã ngỏm củ tỏi<&nl> Anh hùng hạ gục &d&l<trigger.name>&r"} @PlayersOnServer ~onDeath
+  - effect:particles{p=instantSpell;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self ~onTimer:20
+  - skill{s=SN5Heath} ~onDamaged >0 1+
+  - skill{s=SN6Tspawner} @PlayersOnServer ~onSpawn
+  - effect:firework{t=2;d=1;tr=true} @Ring{radius=10;points=10} ~onSpawn
+  - skill{s=SN5Death} @PlayersOnServer ~onDeath
+  - skill{s=SN5Skill1} @target ~onCombat <70%
+  - skill{s=SN5Skill2} @target ~onCombat <80%
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  - skill{s=SN5Skill3} @target ~onTimer:225
+  - skill{s=SN5skill4} @target ~onTimer:333 <90%
+  - skill{s=SN5Skill5} @target ~onTimer:145
+  - skill{s=SN6Tdame} ~onDamaged >0 1+
+  - skill{s=SN6Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN6Tskill2} @Target ~onTimer:150
+  - skill{s=SN6Tskill3} @Target ~onTimer:621
+  - skill{s=SN7Tattack} ~onAttack <100% 1
+  - skill{s=SN7Tdame} ~onDamaged >0 1+
+  - skill{s=SN7Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN7Tskill2} @Target ~onTimer:150
+  - skill{s=SN7Tskill3} @Target ~onTimer:621
+  KillMessages:
+  - '&c<target.name> &fđã bị ném bánh vào mặt'
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'
+
+SinhNhat8Tuoisuperhard:
+  Mobtype: husk
+  Display: '&f&l[&c&lPhó Bản&f&l] &6&lBánh &d&lSinh Nhật'
+  Health: 9000000
+  Armor: 160
+  Damage: 90000
+  Disguise:
+      Type: player
+      Player: '&6&lBánh &d&lSinh Nhật'
+      Skin: Snekkiecrafts
+  Modules:
+    ThreatTable: true
+  Options:
+    FollowRange: 30
+    MovementSpeed: 0.8
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    KnockbackResistance: 100
+    PreventItemPickup: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    Despawn: false
+  Equipment:
+  - cake:4
+  - btgSN5Item:0
+  Skills:
+  - message{m="&r&c<mob.name> &bđang xuất hiện<&nl> &e-----&aMÁU&f/&cFULL MÁU &a<mob.hp>&f/&c<mob.mhp>&r"} @PlayersOnServer ~onTimer:1200
+  - message{m="&r&c<mob.name> &bđã ngỏm củ tỏi<&nl> Anh hùng hạ gục &d&l<trigger.name>&r"} @PlayersOnServer ~onDeath
+  - effect:particles{p=instantSpell;a=50;hs=0.1;vs=0.1;s=0.2;y=1} @Self ~onTimer:20
+  - skill{s=SN5Heath} ~onDamaged >0 1+
+  - skill{s=SN6Tspawner} @PlayersOnServer ~onSpawn
+  - effect:firework{t=2;d=1;tr=true} @Ring{radius=10;points=10} ~onSpawn
+  - skill{s=SN5Death} @PlayersOnServer ~onDeath
+  - skill{s=SN5Skill1} @target ~onCombat <70%
+  - skill{s=SN5Skill2} @target ~onCombat <80%
+  - potion{type=GLOWING;duration=9999999;level=2} @self ~onTimer:1
+  - skill{s=SN5Skill3} @target ~onTimer:225
+  - skill{s=SN5skill4} @target ~onTimer:333 <90%
+  - skill{s=SN5Skill5} @target ~onTimer:145
+  - skill{s=SN6Tdame} ~onDamaged >0 1+
+  - skill{s=SN6Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN6Tskill2} @Target ~onTimer:150
+  - skill{s=SN6Tskill3} @Target ~onTimer:621
+  - skill{s=SN7Tattack} ~onAttack <100% 1
+  - skill{s=SN7Tdame} ~onDamaged >0 1+
+  - skill{s=SN7Tskill1} ~onCombat ~onTimer:360
+  - skill{s=SN7Tskill2} @Target ~onTimer:150
+  - skill{s=SN7Tskill3} @Target ~onTimer:621
+  KillMessages:
+  - '&c<target.name> &fđã bị ném bánh vào mặt'
+  - '&c<target.name> &fđã bị hạ gục bởi <mob.name>'
